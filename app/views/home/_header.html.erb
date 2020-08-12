@@ -1,0 +1,22 @@
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+      <%= link_to 'Pinterest copycat', root_path, class: 'navbar-brand' %>
+    </div>
+    <ul class="nav navbar-nav navbar-right" style="padding-right: 50px">
+      <li class="active"><%= link_to 'Strona główna', root_path %></li>
+      <li> <%= link_to 'O mnie', home_about_path %> </li>
+      <li> <%= link_to 'Lista pinów', pins_path %> </li>
+
+      <% if user_signed_in? %>
+        <li><%= link_to 'Edycja profilu', edit_user_registration_path %></li>
+        <li><%= link_to 'Nowy pin', new_pin_path %></li>
+        <li><%= link_to 'Wylogownie', destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to 'Logowanie', new_user_session_path %></li>
+        <li><%= link_to 'Rejestracja', new_user_registration_path %></li>
+      <% end %>
+
+    </ul>
+
+  </div>
+</nav>
