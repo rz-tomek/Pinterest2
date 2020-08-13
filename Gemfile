@@ -34,6 +34,8 @@ gem 'jquery-rails'
 
 gem 'devise', '~> 4.7', '>= 4.7.2'
 
+gem 'paperclip', '~> 6.1'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
